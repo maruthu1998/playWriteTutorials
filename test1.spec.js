@@ -11,22 +11,26 @@ const { chromium } = require('playwright'); // Import Playwright
   const page = await browser.newPage();
 
   // Navigate to a webpage (e.g., example.com)
-  await page.goto('https://www.google.co.in/');
+  await page.goto('https://www.saucedemo.com/v1/');
 
   // Get and log the page title
   const title = await page.title();
   console.log('Page Title:', title);
-  console.log('URL' +page.url);
+  //console.log('URL' +page.url);
 
   // Click a link (modify the selector based on the page structure)
-  await page.click('text="More information"');
+  await page.click('.user-name');
+  await page.fill('.user-name', 'Maruthupandi');
+  await page.click('.ppassword');
+  await page.fill('.password', 'Maruthu@167');
+  await page.keyboard.press('Enter');
 
   // Wait for an element to appear (change the selector as needed)
-  await page.waitForSelector('h1');
+  //await page.waitForSelector('h1');
 
   // Get and log the content of the h1 element
-  const headingText = await page.textContent('h1');
-  console.log('Heading on new page:', headingText);
+  //const headingText = await page.textContent('h1');
+ // console.log('Heading on new page:', headingText);
 
   // Close the browser
   await browser.close();
