@@ -16,6 +16,7 @@ const { chromium } = require('playwright'); // Import Playwright
   // Get and log the page title
   const title = await page.title();
   console.log('Page Title:', title);
+  console.log('URL' +page.url);
 
   // Click a link (modify the selector based on the page structure)
   await page.click('text="More information"');
