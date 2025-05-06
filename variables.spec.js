@@ -15,6 +15,9 @@ var sumOfNum = num1 + num2;
 console.log('Sum of the two numbers: ', sumOfNum);
 var multiplyNum = num1 * num2;
 console.log('Multiplication of the two numbers: ', multiplyNum);
+if(num1 >num2){
+    console.log(num1, ' is greater than ', num2);
+}
 var rectLen = 12;
 var rectBreadth = 11;
 var rectPerimeter = 2 * (rectLen + rectBreadth);
